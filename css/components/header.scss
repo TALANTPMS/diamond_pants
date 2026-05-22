@@ -25,13 +25,14 @@
     position: relative;
     display: flex;
     align-items: center;
-    position: relative;
     justify-content: space-between;
+    gap: 16px;
     z-index: 2;
     padding: 12px 16px;
     border-radius: 10px;
     background: transparent;
     backdrop-filter: none;
+    overflow: visible;
 
     @include desctop() {
       gap: 20px;
@@ -47,6 +48,8 @@
     display: flex;
     align-items: center;
     gap: 44px;
+    flex: 1;
+    min-width: 0;
   }
 
   .logo {
@@ -73,15 +76,20 @@
 
   .header-decor {
     flex-shrink: 0;
-    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 3;
+    pointer-events: none;
 
     img {
       display: block;
-      width: auto;
-      height: 72px;
-      max-width: 200px;
-      object-fit: contain;
-      object-position: right center;
+      width: auto !important;
+      height: 90px !important;
+      max-width: 220px;
+      object-fit: contain !important;
+      object-position: center;
     }
 
     @include mobile() {
