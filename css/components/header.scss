@@ -71,6 +71,24 @@
     }
   }
 
+  .header-decor {
+    flex-shrink: 0;
+    margin-left: auto;
+
+    img {
+      display: block;
+      width: auto;
+      height: 72px;
+      max-width: 200px;
+      object-fit: contain;
+      object-position: right center;
+    }
+
+    @include mobile() {
+      display: none;
+    }
+  }
+
   .header-right {
     display: flex;
     align-items: center;

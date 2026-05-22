@@ -232,7 +232,7 @@ img {
   }
 
   span {
-    color: var(--1, #dbdbdb);
+    color: var(--1, #ffffff);
     @include mobile() {
       font-size: 18px !important;
       line-height: 100% !important;
@@ -1235,6 +1235,24 @@ br {
     }
   }
 
+  .header-decor {
+    flex-shrink: 0;
+    margin-left: auto;
+
+    img {
+      display: block;
+      width: auto;
+      height: 72px;
+      max-width: 200px;
+      object-fit: contain;
+      object-position: right center;
+    }
+
+    @include mobile() {
+      display: none;
+    }
+  }
+
   .header-right {
     display: flex;
     align-items: center;
@@ -2139,7 +2157,7 @@ br {
   display: inline-block;
 
   border-radius: 0 16px 16px 16px;
-  background: #fff;
+  background: #F9F3E7;
 }
 
 .bot-message p span {
