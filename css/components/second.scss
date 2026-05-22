@@ -289,9 +289,9 @@
 }
 
 .response-options button {
-  border-radius: 16px;
+  border-radius: 3px;
   background: var(--1, #f5f5f5);
-  border: 0;
+  border: 2px solid #000;
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-skip-ink: none;
@@ -347,8 +347,9 @@
 }
 
 .response-options button:hover {
-  border-radius: 16px;
-  background: var(--2, #5aaf31);
+  border-radius: 3px;
+  border: 2px solid #000;
+  background: var(--2, #823434);
   color: #fff;
 }
 
@@ -507,7 +508,8 @@
   max-width: 100%;
   display: inline-block;
 
-  border-radius: 0 16px 16px 16px;
+  border-radius: 3px;
+  border: 2px solid #000;
   background: #F9F3E7;
 }
 
