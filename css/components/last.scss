@@ -1,0 +1,46 @@
+.last {
+  background: var(--3, #47413b);
+
+  .last-inner {
+    padding: 46px 0 35px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    justify-content: space-between;
+    @include mobile() {
+      padding: 35px 0;
+      gap: 5px;
+    }
+  }
+
+  .last-logo {
+    width: 128px;
+
+    @include mobile() {
+      width: 100px;
+    }
+  }
+
+  .section-title {
+    color: #fff;
+    text-align: right;
+
+    @include table() {
+      br {
+        display: none;
+      }
+    }
+
+    @include mobile() {
+      font-size: 18px !important;
+    }
+
+    span {
+      @include mobile() {
+        font-size: 18px !important;
+        display: block;
+      }
+    }
+  }
+}

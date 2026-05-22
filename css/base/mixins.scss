@@ -1,0 +1,42 @@
+$over-width: 1300px;
+$small-width: 1050px;
+$desctop-width: 992px;
+$table-width: 768px;
+$mobile-width: 650px;  
+
+@mixin small {
+	@media all and (max-width: #{$small-width}) {
+		@content;
+	}
+} 
+
+@mixin over-width {
+	@media all and (max-width: #{$over-width}) {
+		@content;
+	}
+} 
+
+@mixin desctop {
+	@media all and (max-width: #{$desctop-width}) {
+		@content;
+	}
+}
+
+@mixin table {
+	@media all and (max-width: #{$table-width}) {
+		@content;
+	}
+}
+ 
+
+@mixin mobile {
+	@media all and (max-width: #{$mobile-width}) {
+		@content;
+	}
+}
+
+@mixin to($media) {
+    @media screen and (max-width: $media ) {
+        @content;
+    }
+}

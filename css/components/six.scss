@@ -1,0 +1,114 @@
+.six {
+  background: #f5f3ee;
+
+  .six-inner {
+    padding: 130px 0 130px 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include desctop() {
+      padding: 90px 0;
+    }
+
+    @include table() {
+      padding: 60px 0;
+      flex-direction: column;
+    }
+
+    @include mobile() {
+      padding: 35px 0;
+    }
+  }
+
+  .six-left {
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+
+    @include table() {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .form-title {
+    margin-bottom: 12px;
+
+    @include desctop() {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .form-subtitle {
+    margin-bottom: 35px;
+
+    @include desctop() {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .form-inner {
+    max-width: 524px;
+    width: 100%;
+
+    @include table() {
+      max-width: 100%;
+    }
+  }
+
+  .form-section-wrap {
+    max-width: 100%;
+  }
+
+  .form-section-row {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .six-img {
+    max-width: 476px;
+    width: 100%;
+
+    @include small() {
+      max-width: 400px;
+    }
+
+    @include desctop() {
+      max-width: 300px;
+    }
+
+    @include table() {
+      max-width: 450px;
+      margin: 0 auto;
+    }
+  }
+
+  .six-bg-img {
+    position: absolute;
+    width: 748px;
+    right: -580px;
+    top: -223px;
+    z-index: -1;
+
+    @include desctop() {
+      right: -200px;
+    }
+
+    @include table() {
+      display: none;
+    }
+  }
+}

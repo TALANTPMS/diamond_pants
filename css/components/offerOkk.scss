@@ -1,0 +1,133 @@
+.offerOk {
+  position: relative;
+  margin-top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 0 70px;
+  background-image: none;
+
+  @include mobile() {
+    align-items: start;
+
+    padding: 130px 0 150px;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  .offer-left {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .offer-inner {
+    padding: 0;
+    max-width: 100%;
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
+  }
+
+  .btn-wrap {
+    width: 300px;
+    margin: 0 auto;
+
+    @include mobile() {
+      width: 100% !important;
+    }
+  }
+
+  .btn {
+    width: 300px;
+    height: 60px;
+
+    @include mobile() {
+      width: 100% !important;
+    }
+  }
+
+  &::before {
+    display: none;
+  }
+   .offer-left {
+      position: static;
+    }
+
+  .offer-form__text {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  .section-title {
+    max-width: 938px;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    font-size: 38px;
+    padding-left: 0;
+    opacity: 1;
+    color: #fff;
+    opacity: 1;
+
+    @include desctop() {
+      font-size: 26px;
+    }
+
+    @include mobile() {
+      font-size: 20px !important;
+      line-height: 100% !important;
+    }
+
+    #thanksName {
+      display: block;
+      @include mobile() {
+        font-size: 20px !important;
+        line-height: 100% !important;
+      }
+    }
+
+
+    span {
+      padding: 0;
+      text-align: center;
+      color: #fff;
+      &::after {
+        display: none;
+      }
+      @include mobile() {
+        font-size: 20px !important;
+        line-height: 100% !important;
+      }
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+   
+.header-thanks {
+  .logo {
+    width: 100px;
+    @include mobile() {
+      width: 60px;
+    }
+  }
+}

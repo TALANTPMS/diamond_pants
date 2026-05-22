@@ -1,0 +1,234 @@
+.third {
+  background: #f5f3ee;
+
+  .third-inner {
+    padding: 50px 0 130px;
+    position: relative;
+    @include mobile() {
+      padding: 35px 0;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 20px;
+
+    @include mobile() {
+      text-align: center;
+    }
+    span {
+      display: block;
+      padding-left: 229px;
+
+      @include over-width() {
+        padding-left: 160px;
+      }
+
+      @include desctop() {
+        padding-left: 130px;
+      }
+
+      @include mobile() {
+        text-align: center;
+        padding-left: 0;
+      }
+    }
+  }
+
+  .subtitle {
+    padding-left: 229px;
+    margin-bottom: 126px;
+
+    @include over-width() {
+      padding-left: 160px;
+    }
+    @include desctop() {
+      padding-left: 130px;
+    }
+    @include mobile() {
+      padding-left: 0;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  .slick-list {
+    overflow: visible;
+  }
+
+  .third-wrap {
+    max-width: 957px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .third-slider {
+    margin-bottom: 122px;
+
+    @include mobile() {
+      margin-bottom: 80px;
+    }
+  }
+
+  .third-slide {
+    margin: 0 2px;
+  }
+
+  .third-slide__img {
+    margin-bottom: 17px;
+  }
+
+  .third-slide__title {
+    color: var(--3, #47413b);
+    font-family: "InterTightLight", sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 130%;
+
+    span {
+      color: var(--3, #47413b);
+      font-family: "InterTightSemiBold", sans-serif;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%; /* 28.6px */
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 100px;
+    height: 44px;
+    z-index: 10;
+    top: -60px;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    display: none;
+  }
+
+  .slick-next {
+    right: -225px;
+
+    @include over-width() {
+      right: 0;
+    }
+  }
+
+  .slick-prev {
+    left: auto;
+    right: -100px;
+
+    @include over-width() {
+      right: 130px;
+    }
+  }
+
+  .third-subtitle {
+    color: var(--3, #47413b);
+    font-family: "InterTightMedium", sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 31.2px */
+    letter-spacing: 0.26px;
+    text-transform: uppercase;
+    margin-bottom: 73px;
+
+    @include mobile() {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px !important;
+      line-height: 120% !important;
+    }
+  }
+
+  .third-list {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  .third-item {
+    width: 552px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    position: relative;
+
+    @include over-width() {
+      width: 47%;
+    }
+
+    @include mobile() {
+      width: 100%;
+      gap: 20px;
+    }
+
+    &:nth-child(2) {
+      @media (min-width: 650px) {
+        flex-direction: column-reverse;
+        margin-top: 100px;
+      }
+
+      @include mobile() {
+        padding-top: 20px;
+        border-top: 1px solid #00000085;
+      }
+
+      .third-item__arrow {
+        width: 78px;
+        position: absolute;
+        left: 247px;
+        top: -33px;
+        bottom: auto;
+
+        @include table() {
+          width: 50px;
+          left: 240px;
+        }
+      }
+    }
+  }
+
+  .third-item__img {
+  }
+
+  .third-item__title {
+    color: var(--3, #47413b);
+    font-size: 22px;
+    font-family: "InterTightRegular", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+
+    @include mobile() {
+      font-size: 22px !important;
+      line-height: 120% !important;
+      text-align: center;
+    }
+  }
+
+  .third-item__arrow {
+    width: 78px;
+    position: absolute;
+    left: 288px;
+    bottom: -33px;
+
+    @include table() {
+      width: 50px;
+      left: 240px;
+    }
+
+    @include mobile() {
+      display: none;
+    }
+  }
+}

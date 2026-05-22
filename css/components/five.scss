@@ -1,0 +1,131 @@
+.five {
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  .five-inner {
+    padding: 130px 0 130px 0;
+    position: relative;
+
+    @include desctop() {
+      padding: 90px 0;
+    }
+
+    @include table() {
+      padding: 60px 0;
+    }
+
+    @include mobile() {
+      padding: 35px 0;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 80px;
+
+    @include table() {
+      margin-bottom: 40px;
+    }
+
+    @include mobile() {
+      font-size: 18px !important;
+    }
+
+    span {
+      color: var(--1, #ed1c24);
+    }
+  }
+
+  .five-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+
+    @include desctop() {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include mobile() {
+      grid-template-columns: 1fr;
+      display: block;
+    }
+  }
+
+  .five-item {
+    min-height: 251px;
+    border: 1px solid var(--3, #47413b46);
+    padding: 20px 20px 20px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include over-width() {
+      padding: 20px;
+    }
+
+    @include mobile() {
+      min-height: auto;
+      height: 215px;
+      margin: 0 5px;
+    }
+  }
+
+  .five-item__logo {
+    width: max-content;
+    margin-bottom: 20px;
+
+    @include over-width() {
+      transform: scale(0.9);
+    }
+
+    @include desctop() {
+      width: 70%;
+    }
+
+    @include mobile() {
+      width: 160px;
+    }
+  }
+
+  .five-item__info {
+    color: var(--3, #47413b);
+    font-family: "InterTightLight", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%; /* 21.6px */
+    letter-spacing: 0.18px;
+    margin-bottom: 20px;
+  }
+
+  .five-item__content {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .five-item__title {
+    color: var(--3, #47413b);
+    font-family: "InterTightMedium", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 19.2px */
+    letter-spacing: 0.16px;
+    text-transform: uppercase;
+
+    &.big_title {
+      font-size: 26px;
+      letter-spacing: 0.26px;
+
+      @include desctop() {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .five-item__icon {
+    width: fit-content;
+  }
+}

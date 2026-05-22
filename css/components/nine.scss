@@ -1,0 +1,234 @@
+.nine {
+    
+    
+    
+    background: #F6F8FA;
+    padding: 120px 0 153px;
+
+
+    @include mobile (){
+        padding: 35px 0;
+    }
+
+
+    .nine-inner  {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-right: 50px;
+
+        @include small (){
+            padding-right: 0;
+        }
+
+        @include table (){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        
+
+     
+    }
+
+    .nine-left  {
+
+    }
+
+    .section-title {
+        font-size: 50px;
+        margin-bottom: 34px;
+        color: #1538BA;
+        text-transform: initial;
+
+        font-size: calc(30px + 20 * ((100vw - 640px)/(1920 - 640)));
+        
+        @media screen and(min-width: 1920px) {
+            font-size: 50px;
+        }
+
+        @include table (){
+            br {
+                display: none;
+            }
+        }
+
+        @include mobile (){
+            text-align: center;
+        }
+    }
+
+    .nine-subtitle {
+        color: #FFF;
+        font-family: 'Exo2SemiBold',sans-serif;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 26.4px */
+        letter-spacing: 0.44px;
+
+        display: inline-block;
+
+        padding: 16px 14px 20px 18px;
+        border-radius: 18px;
+        background: #D32112;
+
+        margin-bottom: 38px;
+
+        @include mobile (){
+            text-align: center;
+            padding: 15px 10px;
+            margin-bottom: 20px;
+        }
+
+    }
+
+    .nine-list  {
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
+
+        padding-left: 11px;
+
+        @include desctop (){
+            padding-left: 0;
+        }
+
+        @include mobile (){
+            gap: 20px;
+        }
+    }
+
+    .nine-item {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @include mobile (){
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            padding: 20px 10px;
+            border: 1px solid rgba($color: #000000, $alpha: .1);
+            border-radius: 20px;
+            gap: 15px;
+        }
+    }
+
+    .nine-item__img  {
+        width: 40px;
+    }
+
+    .nine-item__text {
+        color: #1538BA;
+        font-family: 'Exo2Medium',sans-serif;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        @include table (){
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .nine-right {
+        @include table (){
+            width: 100%;
+        }
+    }
+
+    .form-inner {
+        max-width: 500px;
+        width: 100%;
+        background-image: url(../img/nine/1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 50px 60px;
+
+        border-radius: 40px;
+        position: relative;
+
+        @include desctop (){
+            padding: 50px 20px 20px;
+            max-width: 350px;
+        }
+
+        @include table (){
+            max-width: 500px;
+        }
+
+        @include mobile (){
+            padding: 30px 10px 20px;
+        }
+
+
+        &::after {
+            content: '';
+            position: absolute;
+
+            left: 50%;
+            transform: translateX(-50%);
+            top: -49px;
+
+            background-image: url(../img/nine/play.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            filter: drop-shadow(0px 15.895px 15.895px rgba(0, 0, 0, 0.40));
+            width: 139px;
+            height: 79px;
+            z-index: 1;
+
+            @include mobile (){
+                width: 80px;
+                height: 80px;
+                top: -30px;
+            }
+        }
+    }
+
+    .form-subtitle {
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        text-align: center;
+        line-height: 160%;
+
+
+        @include desctop (){
+            font-size: 20px;
+        }
+    }
+
+    .form-section-wrap  {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .form-section-row  {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .form-bottom {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+
+    .nine-right {
+        padding-top: 62px;
+
+        @include mobile (){
+            padding-top: 25px;
+        }
+    }
+
+}
