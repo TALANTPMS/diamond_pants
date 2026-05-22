@@ -167,7 +167,7 @@ button {
   cursor: pointer;
 }
 img {
-  width: 100%;
+  width: 50%;
   height: 100%;
   display: block;
   object-fit: cover;
@@ -232,7 +232,7 @@ img {
   }
 
   span {
-    color: var(--1, #81a8c8);
+    color: var(--1, #dbdbdb);
     @include mobile() {
       font-size: 18px !important;
       line-height: 100% !important;
@@ -1376,13 +1376,42 @@ br {
     position: relative;
     z-index: 2;
     max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .offer-color-box {
+    background: #823434;
+    border-radius: 16px;
+    padding: 22px 28px;
+    max-width: 100%;
+    width: fit-content;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.8s;
+
+    &._active {
+      opacity: 1;
+    }
+
+    @include mobile() {
+      width: 100%;
+      padding: 18px 16px;
+      border-radius: 12px;
+    }
+  }
+
+  .offer-title-box {
+    .section-title {
+      margin: 0;
+      padding: 0;
+    }
   }
 
   .section-title {
     position: relative;
     z-index: 1;
-    margin-bottom: 28px;
-    padding-left: 0;
     color: #fff;
     text-align: left;
 
@@ -1424,26 +1453,20 @@ br {
     }
   }
 
+  .offer-color-box .offer-box__text,
+  .offer-color-box .section-title,
+  .offer-color-box .section-title span {
+    color: #fff;
+  }
+
   .offer-panel {
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    max-width: 640px;
-    padding: 22px 26px;
-    border-radius: 16px;
-    background: var(--3, #823434);
-    opacity: 0;
-    transition: opacity 0.8s;
     transition-delay: 0.3s;
-
-    &._active {
-      opacity: 1;
-    }
 
     @include mobile() {
       gap: 14px;
-      padding: 18px 16px;
-      border-radius: 12px;
     }
 
     svg {
