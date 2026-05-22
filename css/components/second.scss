@@ -47,6 +47,16 @@
 }
 
 .second {
+  position: relative;
+  z-index: 2;
+  margin-top: -36px;
+  background: #fff;
+  border-radius: 36px 36px 0 0;
+
+  @include mobile() {
+    margin-top: -24px;
+    border-radius: 24px 24px 0 0;
+  }
 }
 
 .second-overflow {
@@ -57,8 +67,7 @@
 .second-inner {
   padding: 70px 0 50px;
   border-radius: 30px;
-  border-radius: 30px;
-  background: var(--1, #81a8c8);
+  background: #f6f4f0;
 
   @include mobile() {
     padding: 15px 0;

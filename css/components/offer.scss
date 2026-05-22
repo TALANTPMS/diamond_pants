@@ -5,21 +5,59 @@
     overflow: hidden;
   }
 
-  .offer-inner {
-    padding: 150px 0 48px 0;
+  .offer-hero {
     position: relative;
+    background-image: url(../img/offer/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.15) 0%,
+        rgba(0, 0, 0, 0.35) 100%
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @include mobile {
+      background-image: url(../img/offer/bg.jpg);
+      background-size: cover;
+      background-position: center top;
+    }
+  }
+
+  .offer-inner {
+    padding: 130px 0 56px;
+    position: relative;
+    z-index: 1;
 
     @include mobile() {
-      padding: 86px 0 30px 0;
+      padding: 100px 0 32px;
     }
+  }
+
+  .offer-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
   }
 
   .section-title {
     position: relative;
     z-index: 1;
-    margin-bottom: 36px;
-    padding-left: 34px;
+    margin-bottom: 28px;
+    padding-left: 0;
+    color: #fff;
+    text-align: left;
+
     span {
+      color: #fff;
     }
 
     @include over-width() {
@@ -35,7 +73,6 @@
       font-weight: 700;
       line-height: 110% !important;
       text-align: start !important;
-      padding-left: 0;
 
       br {
         display: none;
@@ -57,27 +94,26 @@
     }
   }
 
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-  .offer-box {
+  .offer-panel {
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    padding-left: 34px;
+    max-width: 640px;
+    padding: 22px 26px;
+    border-radius: 16px;
+    background: var(--3, #823434);
     opacity: 0;
     transition: opacity 0.8s;
     transition-delay: 0.3s;
+
     &._active {
       opacity: 1;
     }
 
-    @include desctop() {
-      padding-left: 0;
-    }
-
     @include mobile() {
       gap: 14px;
-      padding-left: 0;
+      padding: 18px 16px;
+      border-radius: 12px;
     }
 
     svg {
@@ -98,7 +134,7 @@
     line-height: 106%;
 
     span {
-      color: var(--3, #823434);
+      color: #fff;
       font-weight: 600;
 
       @include mobile() {
@@ -117,11 +153,9 @@
     }
   }
 
-  ///////////////////////////
-
   .offer-img {
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     width: 728.856px;
     right: -54px;
     bottom: -54px;
@@ -153,6 +187,7 @@
       position: static;
       width: 100%;
       display: block;
+      margin-top: 24px;
     }
   }
 
