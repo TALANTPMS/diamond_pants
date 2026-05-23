@@ -1268,3 +1268,68 @@ body:has(.offerOk.thanks) .header .logo {
     max-width: 100%;
   }
 }
+
+/* ============================================
+   MOBILE HERO TYPOGRAPHY FIX
+   ============================================ */
+
+   @media (max-width: 650px) {
+
+    /* Скрываем <br> теги в заголовке на мобиле */
+    .offer-title.section-title br {
+      display: none;
+    }
+  
+    /* Заголовок — меньше шрифт, нормальный перенос */
+    .offer-title.section-title {
+      font-size: 20px;
+      line-height: 1.25;
+      letter-spacing: -0.2px;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+      hyphens: auto;
+      lang: ru;
+    }
+  
+    /* span внутри заголовка — тот же размер */
+    .offer-title.section-title span {
+      font-size: 20px;
+      display: inline;
+    }
+  
+    /* CTA блок — чуть компактнее */
+    .offer-panel.offer-color-box {
+      padding: 12px 14px;
+      gap: 10px;
+    }
+  
+    .offer-box__text {
+      font-size: 14px;
+      line-height: 1.35;
+    }
+  
+    .offer-box__text span {
+      font-size: 14px !important;
+    }
+  
+    /* CTA блок — скрываем br */
+    .offer-box__text br {
+      display: none;
+    }
+  
+    /* Меньше отступ внутри героя */
+    .offer-inner {
+      padding: 80px 16px 20px;
+      min-height: 240px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .offer-title.section-title {
+      font-size: 18px;
+    }
+  
+    .offer-title.section-title span {
+      font-size: 18px;
+    }
+  }
