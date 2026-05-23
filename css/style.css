@@ -1111,3 +1111,115 @@ body:has(.offerOk.thanks) .header .logo {
     font-size: 20px;
   }
 }
+
+/* ============================================
+   HERO FIX — главная страница
+   ============================================ */
+
+/* Убираем overflow: hidden чтобы герой не обрезался */
+.offer-overflow {
+  overflow: visible;
+}
+
+/* Герой чуть уже чат-блока, с отступами по бокам и скруглёнными углами */
+.offer-hero {
+  max-width: 960px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  min-height: 320px;
+}
+
+/* Фон страницы вокруг героя = бежевый, как bg-page */
+.offer {
+  background: var(--bg-page);
+  padding: 20px 20px 0;
+}
+
+/* Контент внутри героя — центрируем, даём правильные отступы */
+.offer-inner {
+  padding: 90px 40px 40px;
+  min-height: 320px;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/* Контент (текст + CTA) — ограничиваем ширину и сдвигаем ближе к центру */
+.offer-content {
+  max-width: 480px;
+  z-index: 2;
+  position: relative;
+}
+
+/* Бутылка — чуть поменьше и ближе к центру */
+.offer-hero-decor {
+  width: 26%;
+  max-width: 280px;
+  right: 5%;
+}
+
+.offer-hero-decor img {
+  max-height: 280px !important;
+}
+
+/* Хедер поверх героя — logo граница белая чтобы читалась на тёмном */
+.header.widjet {
+  background: transparent;
+}
+
+/* Второй блок (чат) — убираем отрицательный margin чтобы не залезал на Hero */
+.second {
+  margin-top: 0;
+  padding-top: 24px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 992px) {
+  .offer {
+    padding: 16px 16px 0;
+  }
+
+  .offer-hero {
+    border-radius: 18px;
+  }
+
+  .offer-inner {
+    padding: 80px 28px 32px;
+  }
+
+  .offer-hero-decor {
+    width: 30%;
+    max-width: 220px;
+    right: 2%;
+  }
+
+  .offer-hero-decor img {
+    max-height: 220px !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .offer {
+    padding: 12px 12px 0;
+  }
+
+  .offer-hero {
+    border-radius: 14px;
+    min-height: 260px;
+  }
+
+  .offer-inner {
+    padding: 80px 20px 28px;
+    min-height: 260px;
+  }
+
+  .offer-hero-decor {
+    display: none;
+  }
+
+  .offer-content {
+    max-width: 100%;
+  }
+}
