@@ -1128,7 +1128,7 @@ body:has(.offerOk.thanks) .header .logo {
 
 /* Герой — уже чем чат (чат 960px, герой 860px) */
 .offer-hero {
-  max-width: 860px;
+  max-width: 940px;
   margin: 0 auto;
   border-radius: 20px;
   overflow: hidden;
@@ -1185,7 +1185,7 @@ body:has(.offerOk.thanks) .header .logo {
 }
 
 .second .container {
-  max-width: 960px;
+  max-width: 1050px;
 }
 
 .consultation-section__inner {
