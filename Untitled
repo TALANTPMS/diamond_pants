@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <title>«VINOPARK» — Франшиза винного ресторана</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0"/>
+    <meta name="description" content="Зарабатывайте от 6 600 000 ₸ чистой прибыли ежемесячно на франшизе «VINOPARK»"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <style>
+      .offer.offerOk.thanks {
+        min-height: calc(100vh - 120px);
+        display: flex;
+        align-items: center;
+        background: var(--bg-page);
+        padding: 120px 0 60px;
+      }
+
+      .offer.offerOk.thanks .left {
+        width: 100%;
+      }
+
+      .thanks-card {
+        background: #fff;
+        border-radius: 24px;
+        padding: 60px 52px;
+        box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+        max-width: 640px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .thanks-icon {
+        width: 64px;
+        height: 64px;
+        background: var(--primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .thanks-icon svg {
+        width: 30px;
+        height: 30px;
+        stroke: #fff;
+        fill: none;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .thanks-title {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--text-dark);
+      }
+
+      .thanks-title .color {
+        color: var(--primary);
+      }
+
+      .thanks-subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #666;
+      }
+
+      .thanks-divider {
+        width: 100%;
+        height: 1px;
+        background: #f0ebe0;
+      }
+
+      .thanks-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .thanks-info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 15px;
+        color: var(--text-dark);
+        line-height: 1.4;
+      }
+
+      .thanks-info-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--primary);
+        flex-shrink: 0;
+        margin-top: 5px;
+      }
+
+      .btn-wrap {
+        margin-top: 8px;
+      }
+
+      .btn-wrap .btn {
+        padding: 14px 32px;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 12px;
+        border: none;
+      }
+
+      @media (max-width: 650px) {
+        .offer.offerOk.thanks {
+          padding: 100px 0 40px;
+          align-items: flex-start;
+        }
+
+        .thanks-card {
+          padding: 32px 24px;
+          border-radius: 16px;
+          gap: 16px;
+        }
+
+        .thanks-title {
+          font-size: 22px;
+        }
+
+        .thanks-subtitle {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header widjet">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-left">
+            <div class="logo"><img src="img/header/logo.png" alt="logo"/></div>
+            <div class="header-info">Франшиза винного ресторана</div>
+          </div>
+          <div class="header-right">
+            <a class="header-call btn" href="tel:+77017168680">+7 (701) 716-86-80</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="main">
+      <section class="offer offerOk thanks">
+        <div class="left">
+          <div class="container">
+            <div class="thanks-card">
+              <div class="thanks-icon">
+                <svg viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+
+              <div class="thanks-title">
+                <span class="color" id="thanksName">Заявка принята!</span><br>
+                Менеджеры уже занимаются вашим запросом
+              </div>
+
+              <p class="thanks-subtitle">
+                Мы свяжемся с вами в ближайшее время и ответим на все вопросы о франшизе «VINOPARK»
+              </p>
+
+              <div class="thanks-divider"></div>
+
+              <div class="thanks-info">
+                <div class="thanks-info-item">
+                  <div class="thanks-info-dot"></div>
+                  <span>Менеджер позвонит или напишет вам в течение рабочего дня</span>
+                </div>
+                <div class="thanks-info-item">
+                  <div class="thanks-info-dot"></div>
+                  <span>Подготовим подробную презентацию и финансовую модель под ваш город</span>
+                </div>
+                <div class="thanks-info-item">
+                  <div class="thanks-info-dot"></div>
+                  <span>Ответим на любые вопросы об условиях франшизы и этапах открытия</span>
+                </div>
+              </div>
+
+              <div class="btn-wrap">
+                <a class="btn" href="index.html">Вернуться на главную</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer widjet">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-left">
+            <div class="logo"><img src="img/header/logo.png" alt="logo"/></div>
+            <div class="header-info">Франшиза винного ресторана «VINOPARK»</div>
+          </div>
+          <div class="header-right">
+            <a class="politica" href="#" data-fancybox="" data-src="#modal-politika">Политика конфиденциальности</a>
+            <a class="header-call btn" href="tel:+77017168680">+7 (701) 716-86-80</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal: политика -->
+    <div class="modal-content-inner modal-politika" id="modal-politika">
+      <div class="modal-content">
+        <h3 class="modal-top__title">Политика конфиденциальности сайта<br>«VINOPARK»</h3>
+        <div class="modal-politika-text fat">Настоящая Политика конфиденциальности (далее – Политика) устанавливает правила использования персональной информации, получаемой от пользователей сайта (далее – Пользователи) администратором сайта.</div>
+        <div class="modal-politika-text fat">Настоящая Политика конфиденциальности применяется ко всем Пользователям Сайта. Все термины и определения, встречающиеся в тексте Политики толкуются в соответствии с действующим законодательством РК.</div>
+        <div class="modal-politika-text fat">Пользователи прямо соглашаются на обработку своих персональных данных, как это описано в настоящей Политике. Использование сайта означает выражение Пользователем безоговорочного согласия с Политикой и указанными условиями обработки информации.</div>
+        <div class="modal-politika-text">1. Персональная информация Пользователей</div>
+        <div class="modal-politika-text">2. Цели обработки персональной информации Пользователей</div>
+        <div class="modal-politika-text">3. Условия и способы обработки персональной информации Пользователей</div>
+        <div class="modal-politika-text">4. Меры, применяемые для защиты персональной информации Пользователя</div>
+        <div class="modal-politika-text">5. Разрешение споров</div>
+        <div class="modal-politika-text">6. Дополнительные условия</div>
+        <div class="modal-politika-text fat">1.1. Сайт собирает, получает доступ и использует в определенных Политикой целях персональные данные Пользователей, техническую и иную информацию, связанную с Пользователями.</div>
+        <div class="modal-politika-text fat">3.1. Пользователь дает согласие на обработку своих персональных данных путём отправки заявки.</div>
+        <div class="modal-politika-text fat">5.1. Все возможные споры разрешаются в порядке, установленном действующим законодательством Республики Казахстан.</div>
+        <div class="modal-politika-text fat">6.1. Компания вправе вносить изменения в настоящую Политику конфиденциальности без согласия Пользователя.</div>
+      </div>
+    </div>
+
+    <script src="js/vendor.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/feedback.js"></script>
+  </body>
+</html>
