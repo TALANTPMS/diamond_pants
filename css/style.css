@@ -1113,45 +1113,46 @@ body:has(.offerOk.thanks) .header .logo {
 }
 
 /* ============================================
-   HERO FIX v3
+   HERO FIX v4
    ============================================ */
 
-/* Страница — бежевый фон, отступ сверху 10px */
+/* Страница — бежевый фон, зазор сверху */
 .offer {
   background: var(--bg-page);
-  padding: 10px 20px 0;
+  padding: 16px 20px 0;
 }
 
 .offer-overflow {
   overflow: visible;
 }
 
-/* Хедер — НЕ absolute, статичный, вровень с героем */
-.header.widjet {
-  position: static;
-  background: transparent;
-  padding: 14px 0 0;
-  width: 100%;
-}
-
-.header.widjet .container {
-  max-width: 960px;
-  padding: 0 24px;
-}
-
-/* Герой — скруглён со всех сторон */
+/* Герой — уже чем чат (чат 960px, герой 860px) */
 .offer-hero {
-  max-width: 960px;
-  margin: 12px auto 0;
+  max-width: 860px;
+  margin: 0 auto;
   border-radius: 20px;
   overflow: hidden;
-  min-height: 340px;
+  min-height: 360px;
+  position: relative;
 }
 
-/* Убираем отступ внутри героя сверху (хедер теперь не absolute) */
+/* Хедер — поверх картинки, привязан к ширине героя */
+.header.widjet {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 860px;
+  max-width: calc(100% - 40px);
+  padding: 14px 24px;
+  background: transparent;
+  z-index: 100;
+}
+
+/* Контент внутри героя — отступ сверху под хедер */
 .offer-inner {
-  padding: 40px 40px 40px;
-  min-height: 340px;
+  padding: 110px 40px 40px;
+  min-height: 360px;
   align-items: flex-end;
 }
 
@@ -1164,7 +1165,7 @@ body:has(.offerOk.thanks) .header .logo {
 /* Бутылка */
 .offer-hero-decor {
   width: 32%;
-  max-width: 340px;
+  max-width: 320px;
   right: 3%;
 }
 
@@ -1173,7 +1174,7 @@ body:has(.offerOk.thanks) .header .logo {
   height: 95% !important;
 }
 
-/* Чат — вплотную к герою, те же скругления снизу */
+/* Чат — шире героя (960px), вплотную снизу */
 .second {
   margin-top: 0;
   padding-top: 0;
@@ -1187,35 +1188,36 @@ body:has(.offerOk.thanks) .header .logo {
   max-width: 960px;
 }
 
-/* Карточка чата — скругление только снизу */
 .consultation-section__inner {
-  border-radius: 0 0 20px 20px;
+  border-radius: 20px;
 }
 
 /* ============================================
-   RESPONSIVE — TABLET
+   RESPONSIVE — TABLET ≤992px
    ============================================ */
 @media (max-width: 992px) {
   .offer {
-    padding: 10px 16px 0;
-  }
-
-  .header.widjet .container {
-    max-width: 100%;
-    padding: 0 16px;
+    padding: 14px 16px 0;
   }
 
   .offer-hero {
+    max-width: 100%;
     border-radius: 16px;
-    margin-top: 10px;
+  }
+
+  .header.widjet {
+    width: calc(100% - 32px);
+    max-width: calc(100% - 32px);
+    padding: 12px 20px;
+    top: 14px;
   }
 
   .consultation-section__inner {
-    border-radius: 0 0 16px 16px;
+    border-radius: 16px;
   }
 
   .offer-inner {
-    padding: 32px 28px 32px;
+    padding: 100px 28px 32px;
   }
 
   .offer-hero-decor {
@@ -1230,30 +1232,32 @@ body:has(.offerOk.thanks) .header .logo {
 }
 
 /* ============================================
-   RESPONSIVE — MOBILE
+   RESPONSIVE — MOBILE ≤650px
    ============================================ */
 @media (max-width: 650px) {
   .offer {
     padding: 10px 10px 0;
   }
 
-  .header.widjet .container {
-    padding: 0 12px;
-  }
-
   .offer-hero {
     border-radius: 12px;
-    min-height: 240px;
-    margin-top: 8px;
+    min-height: 260px;
+  }
+
+  .header.widjet {
+    width: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+    padding: 10px 14px;
+    top: 10px;
   }
 
   .consultation-section__inner {
-    border-radius: 0 0 12px 12px;
+    border-radius: 12px;
   }
 
   .offer-inner {
-    padding: 24px 16px 24px;
-    min-height: 240px;
+    padding: 90px 16px 24px;
+    min-height: 260px;
   }
 
   .offer-hero-decor {
