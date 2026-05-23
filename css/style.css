@@ -1113,64 +1113,85 @@ body:has(.offerOk.thanks) .header .logo {
 }
 
 /* ============================================
-   HERO FIX — главная страница
+   HERO FIX v2
    ============================================ */
 
-/* Убираем overflow: hidden чтобы герой не обрезался */
+/* Фон страницы вокруг героя = бежевый */
+.offer {
+  background: var(--bg-page);
+  padding: 0 20px 0;
+}
+
 .offer-overflow {
   overflow: visible;
 }
 
-/* Герой чуть уже чат-блока, с отступами по бокам и скруглёнными углами */
+/* Герой — скруглённый блок чуть уже чат-блока */
 .offer-hero {
   max-width: 960px;
   margin: 0 auto;
-  border-radius: 24px;
+  border-radius: 24px 24px 0 0;
   overflow: hidden;
-  min-height: 320px;
+  min-height: 340px;
 }
 
-/* Фон страницы вокруг героя = бежевый, как bg-page */
-.offer {
-  background: var(--bg-page);
-  padding: 20px 20px 0;
+/* Убираем зазор между героем и чатом */
+.second {
+  margin-top: 0;
+  padding-top: 0;
 }
 
-/* Контент внутри героя — центрируем, даём правильные отступы */
+.second > .second-overflow {
+  padding: 0 0 60px 0;
+}
+
+/* Белая карточка чата — скругление только снизу, вровень с героем */
+.second .container {
+  max-width: 960px;
+}
+
+.consultation-section__inner {
+  border-radius: 0 0 24px 24px;
+}
+
+/* Контент внутри героя */
 .offer-inner {
   padding: 90px 40px 40px;
-  min-height: 320px;
-  justify-content: flex-start;
+  min-height: 340px;
   align-items: flex-end;
 }
 
-/* Контент (текст + CTA) — ограничиваем ширину и сдвигаем ближе к центру */
 .offer-content {
-  max-width: 480px;
-  z-index: 2;
+  max-width: 460px;
   position: relative;
+  z-index: 2;
 }
 
-/* Бутылка — чуть поменьше и ближе к центру */
+/* Бутылка — крупнее */
 .offer-hero-decor {
-  width: 26%;
-  max-width: 280px;
-  right: 5%;
+  width: 32%;
+  max-width: 340px;
+  right: 3%;
 }
 
 .offer-hero-decor img {
-  max-height: 280px !important;
+  max-height: 340px !important;
+  height: 95% !important;
 }
 
-/* Хедер поверх героя — logo граница белая чтобы читалась на тёмном */
-.header.widjet {
-  background: transparent;
+/* Хедер — сдвигаем контейнер правее чтобы лого и текст были над картинкой */
+.header.widjet .container {
+  max-width: 960px;
+  padding: 0 40px;
 }
 
-/* Второй блок (чат) — убираем отрицательный margin чтобы не залезал на Hero */
-.second {
-  margin-top: 0;
-  padding-top: 24px;
+/* Кнопка «Заказать звонок» — левее, убираем auto-margin */
+.header .header-right {
+  gap: 12px;
+}
+
+.header .header-call.btn {
+  margin-left: 0;
 }
 
 /* ============================================
@@ -1178,11 +1199,15 @@ body:has(.offerOk.thanks) .header .logo {
    ============================================ */
 @media (max-width: 992px) {
   .offer {
-    padding: 16px 16px 0;
+    padding: 0 16px 0;
   }
 
   .offer-hero {
-    border-radius: 18px;
+    border-radius: 18px 18px 0 0;
+  }
+
+  .consultation-section__inner {
+    border-radius: 0 0 18px 18px;
   }
 
   .offer-inner {
@@ -1190,24 +1215,29 @@ body:has(.offerOk.thanks) .header .logo {
   }
 
   .offer-hero-decor {
-    width: 30%;
-    max-width: 220px;
+    width: 34%;
+    max-width: 260px;
     right: 2%;
   }
 
   .offer-hero-decor img {
-    max-height: 220px !important;
+    max-height: 260px !important;
+    height: 90% !important;
   }
 }
 
 @media (max-width: 650px) {
   .offer {
-    padding: 12px 12px 0;
+    padding: 0 12px 0;
   }
 
   .offer-hero {
-    border-radius: 14px;
+    border-radius: 14px 14px 0 0;
     min-height: 260px;
+  }
+
+  .consultation-section__inner {
+    border-radius: 0 0 14px 14px;
   }
 
   .offer-inner {
@@ -1221,5 +1251,9 @@ body:has(.offerOk.thanks) .header .logo {
 
   .offer-content {
     max-width: 100%;
+  }
+
+  .header.widjet .container {
+    padding: 0 16px;
   }
 }
