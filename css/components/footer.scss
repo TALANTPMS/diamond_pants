@@ -1,7 +1,7 @@
 .footer {
   position: static;
   padding: 26px 0;
-  background: var(--1, #823434);
+  background: var(--color-primary, #823434);
 
   @include mobile() {
     padding: 20px 0;

@@ -46,10 +46,10 @@
 
   .offer-hero-decor {
     position: absolute;
-    right: 0;
+    right: 25px;
     bottom: 0;
     z-index: 2;
-    width: 48%;
+    width: 34%;
     max-width: 560px;
     height: calc(100% - 40px);
     display: flex;
@@ -87,7 +87,7 @@
   }
 
   .offer-color-box {
-    background: #823434;
+    background: var(--color-primary, #823434);
     border-radius: 16px;
     padding: 22px 28px;
     max-width: 100%;
