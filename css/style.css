@@ -991,3 +991,123 @@
     .second .container { max-width: 1100px; }
     .container { max-width: 1300px; }
   }
+
+  /* ============================================
+   THANKS PAGE
+   ============================================ */
+
+/* Хедер на странице thanks — тёмный фон вместо прозрачного */
+.offerOk.thanks ~ * .header.widjet,
+body:has(.offerOk.thanks) .header.widjet {
+  background: var(--primary);
+  position: static;
+}
+
+/* Основная секция — на всю высоту, по центру */
+.offer.offerOk.thanks {
+  min-height: calc(100vh - 110px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-page);
+  padding: 40px 0 60px;
+  width: 100%;
+}
+
+.offer.offerOk.thanks .left {
+  width: 100%;
+}
+
+/* Убираем лишние стили от .offer */
+.offer.offerOk.thanks .container {
+  position: static;
+}
+
+/* Карточка */
+.offer.offerOk.thanks .wrapper {
+  background: #fff;
+  border-radius: 24px;
+  padding: 52px 52px 48px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Заголовок */
+.offer.offerOk.thanks .heading__block {
+  margin-bottom: 28px;
+}
+
+.offer.offerOk.thanks .section-title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.offer.offerOk.thanks .section-title .color {
+  color: var(--primary);
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.offer.offerOk.thanks .offer-form__text {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+/* Кнопка */
+.offer.offerOk.thanks .btn-wrap {
+  margin-top: 4px;
+}
+
+.offer.offerOk.thanks .btn {
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+/* Хедер — фиксируем положение для thanks страницы */
+body:has(.offerOk.thanks) .header.widjet {
+  position: static;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  padding: 14px 0;
+}
+
+body:has(.offerOk.thanks) .header .header-info {
+  color: var(--text-dark);
+}
+
+body:has(.offerOk.thanks) .header .logo {
+  background: #f5f0e8;
+  border-color: transparent;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 650px) {
+  .offer.offerOk.thanks {
+    padding: 28px 0 40px;
+    align-items: flex-start;
+  }
+
+  .offer.offerOk.thanks .wrapper {
+    padding: 32px 20px 28px;
+    border-radius: 16px;
+  }
+
+  .offer.offerOk.thanks .section-title {
+    font-size: 20px;
+  }
+}
