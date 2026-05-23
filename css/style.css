@@ -1113,50 +1113,44 @@ body:has(.offerOk.thanks) .header .logo {
 }
 
 /* ============================================
-   HERO FIX v2
+   HERO FIX v3
    ============================================ */
 
-/* Фон страницы вокруг героя = бежевый */
+/* Страница — бежевый фон, отступ сверху 10px */
 .offer {
   background: var(--bg-page);
-  padding: 0 20px 0;
+  padding: 10px 20px 0;
 }
 
 .offer-overflow {
   overflow: visible;
 }
 
-/* Герой — скруглённый блок чуть уже чат-блока */
+/* Хедер — НЕ absolute, статичный, вровень с героем */
+.header.widjet {
+  position: static;
+  background: transparent;
+  padding: 14px 0 0;
+  width: 100%;
+}
+
+.header.widjet .container {
+  max-width: 960px;
+  padding: 0 24px;
+}
+
+/* Герой — скруглён со всех сторон */
 .offer-hero {
   max-width: 960px;
-  margin: 0 auto;
-  border-radius: 24px 24px 0 0;
+  margin: 12px auto 0;
+  border-radius: 20px;
   overflow: hidden;
   min-height: 340px;
 }
 
-/* Убираем зазор между героем и чатом */
-.second {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.second > .second-overflow {
-  padding: 0 0 60px 0;
-}
-
-/* Белая карточка чата — скругление только снизу, вровень с героем */
-.second .container {
-  max-width: 960px;
-}
-
-.consultation-section__inner {
-  border-radius: 0 0 24px 24px;
-}
-
-/* Контент внутри героя */
+/* Убираем отступ внутри героя сверху (хедер теперь не absolute) */
 .offer-inner {
-  padding: 90px 40px 40px;
+  padding: 40px 40px 40px;
   min-height: 340px;
   align-items: flex-end;
 }
@@ -1167,7 +1161,7 @@ body:has(.offerOk.thanks) .header .logo {
   z-index: 2;
 }
 
-/* Бутылка — крупнее */
+/* Бутылка */
 .offer-hero-decor {
   width: 32%;
   max-width: 340px;
@@ -1179,45 +1173,54 @@ body:has(.offerOk.thanks) .header .logo {
   height: 95% !important;
 }
 
-/* Хедер — сдвигаем контейнер правее чтобы лого и текст были над картинкой */
-.header.widjet .container {
+/* Чат — вплотную к герою, те же скругления снизу */
+.second {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.second > .second-overflow {
+  padding: 0 0 60px 0;
+}
+
+.second .container {
   max-width: 960px;
-  padding: 0 40px;
 }
 
-/* Кнопка «Заказать звонок» — левее, убираем auto-margin */
-.header .header-right {
-  gap: 12px;
-}
-
-.header .header-call.btn {
-  margin-left: 0;
+/* Карточка чата — скругление только снизу */
+.consultation-section__inner {
+  border-radius: 0 0 20px 20px;
 }
 
 /* ============================================
-   RESPONSIVE
+   RESPONSIVE — TABLET
    ============================================ */
 @media (max-width: 992px) {
   .offer {
-    padding: 0 16px 0;
+    padding: 10px 16px 0;
+  }
+
+  .header.widjet .container {
+    max-width: 100%;
+    padding: 0 16px;
   }
 
   .offer-hero {
-    border-radius: 18px 18px 0 0;
+    border-radius: 16px;
+    margin-top: 10px;
   }
 
   .consultation-section__inner {
-    border-radius: 0 0 18px 18px;
+    border-radius: 0 0 16px 16px;
   }
 
   .offer-inner {
-    padding: 80px 28px 32px;
+    padding: 32px 28px 32px;
   }
 
   .offer-hero-decor {
     width: 34%;
     max-width: 260px;
-    right: 2%;
   }
 
   .offer-hero-decor img {
@@ -1226,23 +1229,31 @@ body:has(.offerOk.thanks) .header .logo {
   }
 }
 
+/* ============================================
+   RESPONSIVE — MOBILE
+   ============================================ */
 @media (max-width: 650px) {
   .offer {
-    padding: 0 12px 0;
+    padding: 10px 10px 0;
+  }
+
+  .header.widjet .container {
+    padding: 0 12px;
   }
 
   .offer-hero {
-    border-radius: 14px 14px 0 0;
-    min-height: 260px;
+    border-radius: 12px;
+    min-height: 240px;
+    margin-top: 8px;
   }
 
   .consultation-section__inner {
-    border-radius: 0 0 14px 14px;
+    border-radius: 0 0 12px 12px;
   }
 
   .offer-inner {
-    padding: 80px 20px 28px;
-    min-height: 260px;
+    padding: 24px 16px 24px;
+    min-height: 240px;
   }
 
   .offer-hero-decor {
@@ -1251,9 +1262,5 @@ body:has(.offerOk.thanks) .header .logo {
 
   .offer-content {
     max-width: 100%;
-  }
-
-  .header.widjet .container {
-    padding: 0 16px;
   }
 }
