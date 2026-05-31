@@ -1401,3 +1401,129 @@ body:has(.offerOk.thanks) .header .logo {
       box-sizing: border-box;
     }
   }
+
+  /* ============================================
+   HEADER LOGO ALIGNMENT FIX
+   ============================================ */
+
+/* Хедер занимает ту же ширину что и герой, выровнен по левому краю */
+.header.widjet {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 946px;
+  max-width: calc(100% - 40px);
+  padding: 0;
+  background: transparent;
+  z-index: 100;
+}
+
+/* Контейнер внутри хедера — без лишних отступов, на всю ширину */
+.header.widjet .container {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 24px;
+  margin: 0;
+}
+
+/* Лого — прижато к левому краю */
+.header .header-left {
+  align-items: center;
+  gap: 12px;
+}
+
+.header .logo {
+  flex-shrink: 0;
+}
+
+/* Кнопка — прижата к правому краю */
+.header .header-right {
+  margin-left: auto;
+}
+
+/* ============================================
+   RESPONSIVE ≤992px
+   ============================================ */
+@media (max-width: 992px) {
+  .header.widjet {
+    width: calc(100% - 32px);
+    max-width: calc(100% - 32px);
+    top: 14px;
+  }
+
+  .header.widjet .container {
+    padding: 0 16px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE ≤650px
+   ============================================ */
+@media (max-width: 650px) {
+  .header.widjet {
+    width: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+    top: 10px;
+  }
+
+  .header.widjet .container {
+    padding: 0 12px;
+  }
+}
+/* ============================================
+   HEADER — шире героя, лого выступает влево
+   ============================================ */
+
+   .header.widjet {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Шире героя (946px) на ~120px — лого выступает слева */
+    width: 1080px;
+    max-width: calc(100% - 20px);
+    padding: 0;
+    background: transparent;
+    z-index: 100;
+  }
+  
+  .header.widjet .container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0;
+  }
+  
+  .header .header-right {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+  
+  /* ============================================
+     RESPONSIVE ≤992px
+     ============================================ */
+  @media (max-width: 992px) {
+    .header.widjet {
+      width: calc(100% - 16px);
+      top: 14px;
+    }
+  
+    .header.widjet .container {
+      padding: 0 16px;
+    }
+  }
+  
+  /* ============================================
+     RESPONSIVE ≤650px
+     ============================================ */
+  @media (max-width: 650px) {
+    .header.widjet {
+      width: calc(100% - 10px);
+      top: 10px;
+    }
+  
+    .header.widjet .container {
+      padding: 0 10px;
+    }
+  }
