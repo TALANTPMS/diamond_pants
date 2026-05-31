@@ -1527,3 +1527,66 @@ body:has(.offerOk.thanks) .header .logo {
       padding: 0 10px;
     }
   }
+  /* ============================================
+   HEADER INSIDE HERO FIX
+   ============================================ */
+
+/* Герой — увеличиваем высоту сверху чтобы хедер влез внутрь */
+.offer-hero {
+  min-height: 400px;
+}
+
+/* Хедер — строго той же ширины что герой, не шире */
+.header.widjet {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 946px;
+  max-width: calc(100% - 40px);
+  padding: 0;
+  background: transparent;
+  z-index: 100;
+}
+
+.header.widjet .container {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 24px;
+  margin: 0;
+}
+
+/* Контент героя — отступ сверху больше чтобы не перекрывался хедером */
+.offer-inner {
+  padding-top: 120px;
+}
+
+@media (max-width: 992px) {
+  .header.widjet {
+    width: calc(100% - 32px);
+    top: 14px;
+  }
+
+  .header.widjet .container {
+    padding: 0 16px;
+  }
+
+  .offer-inner {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 650px) {
+  .header.widjet {
+    width: calc(100% - 20px);
+    top: 10px;
+  }
+
+  .header.widjet .container {
+    padding: 0 12px;
+  }
+
+  .offer-inner {
+    padding-top: 90px;
+  }
+}
