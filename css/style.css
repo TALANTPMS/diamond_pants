@@ -1618,11 +1618,13 @@ body:has(.offerOk.thanks) .header .logo {
     margin-top: 10px;
     padding-top: 10px;
     border-top: 1px solid rgba(0,0,0,0.08);
+    justify-content: center;
   }
-
   .footer-mobile-logo {
-    width: 28px;
-    height: 28px;
+    width: 28px !important;
+    height: 28px !important;
+    max-width: 28px !important;
+    min-width: 28px !important;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
