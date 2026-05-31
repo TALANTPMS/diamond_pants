@@ -1271,11 +1271,11 @@ body:has(.offerOk.thanks) .header .logo {
 }
 
 .thanks-page {
-  min-height: calc(100vh - 180px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 20px;
+  padding: 40px 20px;
 }
 
 .thanks-card {
@@ -1304,7 +1304,7 @@ body:has(.offerOk.thanks) .header .logo {
 }
 
 .thanks-btn {
-  min-width: 260px;
+  min-width: 180px;
 }
 
 @media (max-width: 768px) {
