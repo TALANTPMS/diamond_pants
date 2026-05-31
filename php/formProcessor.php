@@ -12,7 +12,7 @@ if (!empty($_POST['honeyfield'])) {
 
 	// Pre settings
 		define("SND_FROM", "info@site.ru");
-		define("SND_TO", " "); 
+		define("SND_TO", "Savelprz2008@gmail.com"); 
 
 		define("SND_NAME", "Diamond Paints");
 		define("NAME_FRANCH", "Diamond Paints");
