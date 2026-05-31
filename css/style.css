@@ -1351,46 +1351,53 @@ body:has(.offerOk.thanks) .header .logo {
 /* ============================================
    MOBILE FOOTER FIX ≤650px
    ============================================ */
-@media (max-width: 650px) {
+   @media (max-width: 650px) {
 
-  /* Скрываем логотип в футере */
-  footer.footer.widjet .header-left {
-    display: none;
+    footer.footer.widjet {
+      padding: 16px 16px;
+    }
+  
+    /* Весь header-inner — колонка */
+    footer.footer.widjet .header-inner {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 8px;
+    }
+  
+    /* Скрываем логотип и левую часть */
+    footer.footer.widjet .header-left {
+      display: none !important;
+    }
+  
+    /* Правая часть — тоже колонка */
+    footer.footer.widjet .header-right {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 8px;
+      width: 100%;
+    }
+  
+    /* Скрываем телефон */
+    footer.footer.widjet .header-pnone {
+      display: none !important;
+    }
+  
+    /* Политика — первая, по центру */
+    footer.footer.widjet .politica {
+      display: block !important;
+      text-align: center;
+      font-size: 13px;
+      order: 1;
+    }
+  
+    /* Кнопка — вторая, на всю ширину */
+    footer.footer.widjet .header-call.btn {
+      display: flex !important;
+      order: 2;
+      width: 100% !important;
+      justify-content: center;
+      padding: 14px 20px;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
   }
-
-  /* Правая часть — вертикально: политика сверху, кнопка снизу */
-  footer.footer.widjet .header-inner {
-    justify-content: flex-end;
-  }
-
-  footer.footer.widjet .header-right {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-    width: 100%;
-  }
-
-  /* Политика конфиденциальности — над кнопкой, по центру */
-  footer.footer.widjet .politica {
-    display: block;
-    text-align: center;
-    font-size: 13px;
-    padding: 4px 0;
-    order: 1;
-  }
-
-  /* Кнопка — под политикой, на всю ширину */
-  footer.footer.widjet .header-call.btn {
-    display: flex;
-    order: 2;
-    width: 100%;
-    justify-content: center;
-    padding: 14px 20px;
-    font-size: 15px;
-  }
-
-  /* Скрываем телефонную ссылку если есть */
-  footer.footer.widjet .header-pnone {
-    display: none;
-  }
-}
