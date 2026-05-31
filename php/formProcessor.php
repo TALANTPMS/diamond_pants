@@ -11,12 +11,12 @@ if (!empty($_POST['honeyfield'])) {
 }
 
 	// Pre settings
-		define("SND_FROM", "info@site.ru");
-		define("SND_TO", "Savelprz2008@gmail.com"); 
+		define("SND_FROM", "noreply@vinopark.kz");   // <-- адрес ОТ кого (должен быть на вашем домене)
+		define("SND_TO", "Savelprz2008@gmail.com");   // <-- адрес КУДА приходят заявки
 
 		define("SND_NAME", "VINOPARK");
 		define("NAME_FRANCH", "VINOPARK");
-		define("SMTP", false); // see settings in Helper.php before you change this const
+		define("SMTP", true); // используем SMTP для надёжной доставки
 
 		$path = dirname(__FILE__);
 		require $path .'/Hellper.php';

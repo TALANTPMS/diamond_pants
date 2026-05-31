@@ -18,11 +18,12 @@ function mailer($sendto, $subject, $htmlBody, $headers = false)
 
         if (SMTP) {
             $phpmailer->isSMTP();
-            $phpmailer->Host = ''; // ex: smtp.mailtrap.io
-            $phpmailer->SMTPAuth = true; // change to false if not needed
-            $phpmailer->Port = 2525; // port
-            $phpmailer->Username = ''; // only n case auth needed, otherwise comment this line
-            $phpmailer->Password = ''; // only n case auth needed, otherwise comment this line
+            $phpmailer->Host       = 'smtp.gmail.com'; // SMTP сервер — замените на свой если не Gmail
+            $phpmailer->SMTPAuth   = true;
+            $phpmailer->Port       = 465;              // 465 для SSL, 587 для TLS
+            $phpmailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // 'ssl' для порта 465
+            $phpmailer->Username   = 'ВАШA_ПОЧТА@gmail.com';      // <<< ЗАМЕНИТЕ
+            $phpmailer->Password   = 'ПАРОЛЬ_ПРИЛОЖЕНИЯ';          // <<< ЗАМЕНИТЕ (App Password из Google)
         }
 
 
