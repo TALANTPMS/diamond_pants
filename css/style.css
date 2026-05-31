@@ -1590,3 +1590,13 @@ body:has(.offerOk.thanks) .header .logo {
     padding-top: 90px;
   }
 }
+.offer-panel.offer-color-box {
+  align-items: center;
+}
+ 
+.offer-panel svg {
+  margin-top: 0;
+  flex-shrink: 0;
+  align-self: center;
+}
+ 
