@@ -103,7 +103,7 @@ const chatScenario = (() => {
         "start start2"
       ),
       createOption(
-        "Сколько я буду зарабатывать?",
+        "Сколько я буду зарабатывать на ресторане?",
         "pay",
         "pay",
         "start start2"
@@ -728,7 +728,7 @@ const chatScenario = (() => {
             "start"
           ),
           createOption(
-            "Сколько я буду зарабатывать?",
+            "Сколько я буду зарабатывать на ресторане?",
             "pay",
             "pay",
             "start"
@@ -781,7 +781,7 @@ const chatScenario = (() => {
             "start"
           ),
           createOption(
-            "Сколько я буду зарабатывать?",
+            "Сколько я буду зарабатывать на ресторане?",
             "pay",
             "pay",
             "start"
@@ -834,7 +834,7 @@ const chatScenario = (() => {
             "start"
           ),
           createOption(
-            "Сколько я буду зарабатывать?",
+            "Сколько я буду зарабатывать на ресторане?",
             "pay",
             "pay",
             "start"
@@ -887,7 +887,7 @@ const chatScenario = (() => {
             "start"
           ),
           createOption(
-            "Сколько я буду зарабатывать?",
+            "Сколько я буду зарабатывать на ресторане?",
             "pay",
             "pay",
             "start"
@@ -969,7 +969,7 @@ const chatScenario = (() => {
         type: "options",
         value: [
           createOption(
-            "Сколько я буду зарабатывать?",
+            "Сколько я буду зарабатывать на ресторане?",
             "pay",
             "pay",
             "start"
