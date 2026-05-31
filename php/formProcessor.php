@@ -14,8 +14,8 @@ if (!empty($_POST['honeyfield'])) {
 		define("SND_FROM", "info@site.ru");
 		define("SND_TO", "Savelprz2008@gmail.com"); 
 
-		define("SND_NAME", "Diamond Paints");
-		define("NAME_FRANCH", "Diamond Paints");
+		define("SND_NAME", "VINOPARK");
+		define("NAME_FRANCH", "VINOPARK");
 		define("SMTP", false); // see settings in Helper.php before you change this const
 
 		$path = dirname(__FILE__);
