@@ -1279,7 +1279,6 @@ body:has(.offerOk.thanks) .header .logo {
 }
 
 .thanks-card {
-  max-width: 700px;
   width: 100%;
   background: #fff;
   border-radius: 24px;
@@ -1308,15 +1307,44 @@ body:has(.offerOk.thanks) .header .logo {
 }
 
 @media (max-width: 768px) {
-  .thanks-card {
-      padding: 35px 25px;
+
+  footer.footer.widjet {
+      padding: 24px 16px;
   }
 
-  .thanks-title {
-      font-size: 28px;
+  .footer-mobile {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
   }
 
-  .thanks-text {
-      font-size: 16px;
+  .footer-logo {
+      flex-shrink: 0;
+  }
+
+  .footer-logo img {
+      width: 70px;
+      height: auto;
+  }
+
+  .footer-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+      text-align: right;
+  }
+
+  .footer-policy {
+      font-size: 12px;
+      line-height: 1.4;
+  }
+
+  .footer-call {
+      width: auto;
+      min-width: 160px;
+      padding: 12px 20px;
+      font-size: 14px;
   }
 }
