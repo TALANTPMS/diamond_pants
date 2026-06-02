@@ -11,7 +11,7 @@ if (!empty($_POST['honeyfield'])) {
 }
 
 	// Pre settings
-		define("SND_FROM", "noreply@vinopark.kz");   // <-- адрес ОТ кого (должен быть на вашем домене)
+		define("SND_FROM", "info@dalidam.live");   // <-- адрес ОТ кого (должен быть на вашем домене)
 		define("SND_TO", "Savelprz2008@gmail.com");   // <-- адрес КУДА приходят заявки
 
 		define("SND_NAME", "VINOPARK");
