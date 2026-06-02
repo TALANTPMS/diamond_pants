@@ -18,12 +18,12 @@ function mailer($sendto, $subject, $htmlBody, $headers = false)
 
         if (SMTP) {
             $phpmailer->isSMTP();
-            $phpmailer->Host       = 'smtp.gmail.com'; // SMTP сервер — замените на свой если не Gmail
+            $phpmailer->Host       = 'info@dalidam.live'; // SMTP сервер — замените на свой если не Gmail
             $phpmailer->SMTPAuth   = true;
             $phpmailer->Port       = 465;              // 465 для SSL, 587 для TLS
             $phpmailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // 'ssl' для порта 465
-            $phpmailer->Username   = 'ВАШA_ПОЧТА@gmail.com';      // <<< ЗАМЕНИТЕ
-            $phpmailer->Password   = 'ПАРОЛЬ_ПРИЛОЖЕНИЯ';          // <<< ЗАМЕНИТЕ (App Password из Google)
+            $phpmailer->Username   = 'info@dalidam.live';      // <<< ЗАМЕНИТЕ
+            $phpmailer->Password   = 'xMWRwV5W8gdsrKp';          // <<< ЗАМЕНИТЕ (App Password из Google)
         }
 
 
