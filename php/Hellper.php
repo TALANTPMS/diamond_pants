@@ -18,7 +18,7 @@ function mailer($sendto, $subject, $htmlBody, $headers = false)
 
         if (SMTP) {
             $phpmailer->isSMTP();
-            $phpmailer->Host       = 'info@dalidam.live'; // SMTP сервер — замените на свой если не Gmail
+            $phpmailer->Host       = 'dalidam.live'; // SMTP сервер хостинга
             $phpmailer->SMTPAuth   = true;
             $phpmailer->Port       = 465;              // 465 для SSL, 587 для TLS
             $phpmailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // 'ssl' для порта 465
