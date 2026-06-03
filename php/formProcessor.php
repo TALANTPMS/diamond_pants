@@ -22,6 +22,7 @@ file_put_contents('/tmp/mail_error.log', date('Y-m-d H:i:s') . ' FORM RECEIVED: 
 
 		$path = dirname(__FILE__);
 		require $path .'/Hellper.php';
+		file_put_contents('/tmp/mail_error.log', date('Y-m-d H:i:s') . " HELLPER LOADED\n", FILE_APPEND);
 
 		$domainName = idn_to_utf8($_SERVER['HTTP_HOST']);
 
@@ -130,6 +131,7 @@ file_put_contents('/tmp/mail_error.log', date('Y-m-d H:i:s') . ' FORM RECEIVED: 
 		$goodStatus = ($thankYouPage) ? 2 : 1;
 
 
+		file_put_contents('/tmp/mail_error.log', date('Y-m-d H:i:s') . " CALLING MAILER\n", FILE_APPEND);
 		if (mailer(SND_TO, $subject, $htmlBody, $headers))
 		{
 			if (file_exists("customerEmailTPL.php") && $goodStatus == 1 && !empty($fields["email"][2]))
