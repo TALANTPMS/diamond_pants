@@ -22,13 +22,13 @@ function mailer($sendto, $subject, $htmlBody, $headers = false)
             $phpmailer->Debugoutput = function($str, $level) {
                 file_put_contents('/tmp/mail_error.log', date('Y-m-d H:i:s') . " SMTP[$level]: $str\n", FILE_APPEND);
             };
-            $phpmailer->Host       = 'smtp.gmail.com';
+            $phpmailer->Host       = 'dalidam.live';
             $phpmailer->SMTPAuth   = true;
-            $phpmailer->Port       = 587;
-            $phpmailer->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $phpmailer->Port       = 465;
+            $phpmailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $phpmailer->Timeout    = 10;
-            $phpmailer->Username   = 'Savelprz2008@gmail.com';
-            $phpmailer->Password   = 'zzxuxskpfuvtvipx';
+            $phpmailer->Username   = 'Info@vinopark.dalidam.live';
+            $phpmailer->Password   = 'xMWRwV5W8gdsrKp';
         }
 
 

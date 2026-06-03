@@ -13,7 +13,7 @@ if (!empty($_POST['honeyfield'])) {
 file_put_contents('/tmp/mail_error.log', date('Y-m-d H:i:s') . ' FORM RECEIVED: ' . json_encode($_POST) . "\n", FILE_APPEND);
 
 	// Pre settings
-		define("SND_FROM", "Savelprz2008@gmail.com");   // <-- адрес ОТ кого
+		define("SND_FROM", "Info@vinopark.dalidam.live");   // <-- адрес ОТ кого
 		define("SND_TO", "Savelprz2008@gmail.com");   // <-- адрес КУДА приходят заявки
 
 		define("SND_NAME", "VINOPARK");
