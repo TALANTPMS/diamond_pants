@@ -22,6 +22,7 @@ function mailer($sendto, $subject, $htmlBody, $headers = false)
             $phpmailer->SMTPAuth   = true;
             $phpmailer->Port       = 465;              // 465 для SSL, 587 для TLS
             $phpmailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // 'ssl' для порта 465
+            $phpmailer->Timeout    = 10; // таймаут 10 секунд
             $phpmailer->Username   = 'info@vinopark.dalidam.live';      // <<< ЗАМЕНИТЕ
             $phpmailer->Password   = 'xMWRwV5W8gdsrKp';          // <<< ЗАМЕНИТЕ (App Password из Google)
         }
