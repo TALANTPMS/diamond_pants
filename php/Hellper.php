@@ -18,13 +18,13 @@ function mailer($sendto, $subject, $htmlBody, $headers = false)
 
         if (SMTP) {
             $phpmailer->isSMTP();
-            $phpmailer->Host       = 'dalidam.live'; // SMTP сервер хостинга
+            $phpmailer->Host       = 'smtp.gmail.com';
             $phpmailer->SMTPAuth   = true;
-            $phpmailer->Port       = 465;              // 465 для SSL, 587 для TLS
-            $phpmailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // 'ssl' для порта 465
-            $phpmailer->Timeout    = 10; // таймаут 10 секунд
-            $phpmailer->Username   = 'info@vinopark.dalidam.live';      // <<< ЗАМЕНИТЕ
-            $phpmailer->Password   = 'xMWRwV5W8gdsrKp';          // <<< ЗАМЕНИТЕ (App Password из Google)
+            $phpmailer->Port       = 587;
+            $phpmailer->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $phpmailer->Timeout    = 10;
+            $phpmailer->Username   = 'Savelprz2008@gmail.com';
+            $phpmailer->Password   = 'jvjpbpzvouBdnjy';
         }
 
 
