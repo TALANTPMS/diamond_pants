@@ -17,7 +17,9 @@ jobs:
           server: 194.39.65.4
           username: dalidaml
           password: ${{ secrets.FTP_PASSWORD }}
-          remote-dir: /vinopark.dalidam.live/
+          server-dir: /vinopark.dalidam.live/
+          protocol: ftp
+          port: 21
           exclude: |
             **/.git*
             **/.git*/**
