@@ -24,7 +24,7 @@ file_put_contents('/tmp/mail_error.log', date('Y-m-d H:i:s') . ' FORM RECEIVED: 
 		require $path .'/Hellper.php';
 		file_put_contents('/tmp/mail_error.log', date('Y-m-d H:i:s') . " HELLPER LOADED\n", FILE_APPEND);
 
-		$domainName = idn_to_utf8($_SERVER['HTTP_HOST']);
+		$domainName = $_SERVER['HTTP_HOST'];
 
 		// Structure of array: $arr["NAME_OF_FORM_FIELD"] = array(0..1=>"Field name translations",2=>"Field value")
 		$fields = array(
