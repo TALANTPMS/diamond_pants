@@ -46,6 +46,7 @@ function mailer($sendto, $subject, $htmlBody, $headers = false)
         $phpmailer->send();
         return true;
     } catch (Exception $e) {
+        file_put_contents('/tmp/mail_error.log', date('Y-m-d H:i:s') . ' ' . $e->getMessage() . "\n", FILE_APPEND);
         return false;
     }
 }
