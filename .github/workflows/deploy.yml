@@ -9,22 +9,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
         with:
-          server: 194.39.65.4
-          username: dalidaml
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /vinopark.dalidam.live/
-          protocol: ftps
-          port: 21
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            Dockerfile
-            nixpacks.toml
-            test.php
-            mail_log.php
+          ftp_host: 194.39.65.4
+          ftp_username: dalidaml
+          ftp_password: ${{ secrets.FTP_PASSWORD }}
+          local_source_dir: "."
+          dist_target_dir: "/vinopark.dalidam.live"
+          delete: "false"
+          exclude: '".git* .github Dockerfile nixpacks.toml test.php mail_log.php"'
