@@ -24,7 +24,7 @@ function mailer($sendto, $subject, $htmlBody, $headers = false)
             $phpmailer->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $phpmailer->Timeout    = 10;
             $phpmailer->Username   = 'Savelprz2008@gmail.com';
-            $phpmailer->Password   = 'jvjpbpzvouBdnjy';
+            $phpmailer->Password   = 'zzxuxskpfuvtvipx';
         }
 
 
