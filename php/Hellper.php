@@ -14,10 +14,14 @@ use PHPMailer\PHPMailer\Exception;
 function mailer($sendto, $subject, $htmlBody, $headers = false)
 {
     try {
-        $phpmailer = new PHPMailer();
+        $phpmailer = new PHPMailer(true);
 
         if (SMTP) {
             $phpmailer->isSMTP();
+            $phpmailer->SMTPDebug = 3;
+            $phpmailer->Debugoutput = function($str, $level) {
+                file_put_contents('/tmp/mail_error.log', date('Y-m-d H:i:s') . " SMTP[$level]: $str\n", FILE_APPEND);
+            };
             $phpmailer->Host       = 'smtp.gmail.com';
             $phpmailer->SMTPAuth   = true;
             $phpmailer->Port       = 587;
