@@ -10,6 +10,8 @@ if (!empty($_POST['honeyfield'])) {
     die('error'); // Блокируем отправку формы, если поле заполнено
 }
 
+file_put_contents('/tmp/mail_error.log', date('Y-m-d H:i:s') . ' FORM RECEIVED: ' . json_encode($_POST) . "\n", FILE_APPEND);
+
 	// Pre settings
 		define("SND_FROM", "info@vinopark.dalidam.live");   // <-- адрес ОТ кого (должен быть на вашем домене)
 		define("SND_TO", "Savelprz2008@gmail.com");   // <-- адрес КУДА приходят заявки
