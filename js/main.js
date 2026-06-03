@@ -18,11 +18,11 @@ $(document).ready(function () {
     let formLabel = el.querySelector(".form-bottom");
 
     formBtn.addEventListener("click", function () {
-      if (formCheckbox.checked) {
+      if (!formCheckbox || formCheckbox.checked) {
       } else {
         //formBottom.classList.add('error');
-        formAllert.classList.add("error");
-        formLabel.classList.add("error");
+        if (formAllert) formAllert.classList.add("error");
+        if (formLabel) formLabel.classList.add("error");
       }
     });
 
