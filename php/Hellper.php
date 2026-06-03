@@ -44,9 +44,10 @@ function mailer($sendto, $subject, $htmlBody, $headers = false)
         $phpmailer->CharSet = "UTF-8";
         $phpmailer->AltBody = str_replace(array("<br>", "<br/>", "<BR>", "<BR/>"), "\r\n", strip_tags($htmlBody, "<br>"));
         $phpmailer->send();
+        file_put_contents('/tmp/mail_error.log', date('Y-m-d H:i:s') . ' SUCCESS: sent to ' . $sendto . "\n", FILE_APPEND);
         return true;
     } catch (Exception $e) {
-        file_put_contents('/tmp/mail_error.log', date('Y-m-d H:i:s') . ' ' . $e->getMessage() . "\n", FILE_APPEND);
+        file_put_contents('/tmp/mail_error.log', date('Y-m-d H:i:s') . ' ERROR: ' . $phpmailer->ErrorInfo . ' | ' . $e->getMessage() . "\n", FILE_APPEND);
         return false;
     }
 }
